@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://iata-aci.aero/services/passenger/conformance/authentication" xmlns:messages="http://www.iata.org/IATA/2007/00" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="PassengerConformanceAuthenticationService" targetNamespace="http://iata-aci.aero/services/passenger/conformance/authentication">
+<wsdl:import namespace="http://iata-aci.aero/services/passenger/conformance/authentication" location="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService?wsdl=1" />
+<wsdl:binding name="PassengerConformanceAuthenticationBinding" type="tns:PassengerConformanceAuthenticationPortType">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+<wsdl:operation name="identify">
+<soap:operation soapAction="identify_action" />
+<wsdl:input>
+<soap:body use="literal" />
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal" />
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="verify">
+<soap:operation soapAction="verify_action" />
+<wsdl:input>
+<soap:body use="literal" />
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal" />
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="qualify">
+<soap:operation soapAction="qualify_action" />
+<wsdl:input>
+<soap:body use="literal" />
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal" />
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="PassengerConformanceAuthenticationService">
+<wsdl:port name="PassengerConformanceAuthenticationPort" binding="tns:PassengerConformanceAuthenticationBinding">
+<soap:address location="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService" />
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><!-- edited with XMLSpy v2010 rel. 3 sp1 (x64) (http://www.altova.com) by Arie van der Veek (Schiphol Nederland BV) --><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://iata-aci.aero/services/passenger/conformance/authentication" xmlns:messages="http://www.iata.org/IATA/2007/00" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="PassengerConformanceAuthenticationService" targetNamespace="http://iata-aci.aero/services/passenger/conformance/authentication">
+	<wsdl:types>
+		<xs:schema>
+			<xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService?xsd=3" />
+			<xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService?xsd=4" />
+			<xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService?xsd=7" />
+			<xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService?xsd=8" />
+			<xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService?xsd=5" />
+			<xs:import namespace="http://www.iata.org/IATA/2007/00" schemaLocation="https://uatsbd.china-airlines.com:9001/BagDrop_HKG/PassengerConformanceAuthenticationService?xsd=6" />
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="IdentifyRequestMsg">
+		<wsdl:part name="msg" element="messages:IATA_PassengerConformanceIdentifyRQ" />
+	</wsdl:message>
+	<wsdl:message name="IdentifyResponseMsg">
+		<wsdl:part name="msg" element="messages:IATA_PassengerConformanceIdentifyRS" />
+	</wsdl:message>
+	<wsdl:message name="VerifyRequestMsg">
+		<wsdl:part name="msg" element="messages:IATA_PassengerConformanceQualifyRQ" />
+	</wsdl:message>
+	<wsdl:message name="VerifyResponseMsg">
+		<wsdl:part name="msg" element="messages:IATA_PassengerConformanceQualifyRS" />
+	</wsdl:message>
+	<wsdl:message name="QualifyRequestMsg">
+		<wsdl:part name="msg" element="messages:IATA_PassengerConformanceVerifyRQ" />
+	</wsdl:message>
+	<wsdl:message name="QualifyResponseMsg">
+		<wsdl:part name="msg" element="messages:IATA_PassengerConformanceVerifyRS" />
+	</wsdl:message>
+	<wsdl:portType name="PassengerConformanceAuthenticationPortType">
+		<wsdl:operation name="identify">
+			<wsdl:input message="tns:IdentifyRequestMsg" />
+			<wsdl:output message="tns:IdentifyResponseMsg" />
+		</wsdl:operation>
+		<wsdl:operation name="verify">
+			<wsdl:input message="tns:VerifyRequestMsg" />
+			<wsdl:output message="tns:VerifyResponseMsg" />
+		</wsdl:operation>
+		<wsdl:operation name="qualify">
+			<wsdl:input message="tns:QualifyRequestMsg" />
+			<wsdl:output message="tns:QualifyResponseMsg" />
+		</wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>
